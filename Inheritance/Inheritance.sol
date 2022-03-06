@@ -21,15 +21,16 @@ contract B is A {
         return "B";
     }
 
-    function bar() public pure virtual override returns (string memory) {
+    function bar() public pure override returns (string memory) {
         return "B";
     }
 
     // more code here
 }
 
-contract C is B {
-    function bar() public pure override returns (string memory) {
-        return "C";
-    }
-}
+/*
+What if we wanted to use the code in contract A in contract B while also customizing it?
+We could copy and paste but that is just duplicate code.
+
+We have to use the keyword virtual
+*/
